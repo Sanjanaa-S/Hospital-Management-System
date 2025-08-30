@@ -14,7 +14,7 @@ def create_connection():
     try:
         connection = mysql.connector.connect(**db_config)
         if connection.is_connected():
-            print("✅ Connected to MySQL database")
+            print(" Connected to MySQL database")
             return connection
         else:
             print("❌ Connection failed")
