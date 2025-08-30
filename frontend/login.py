@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import streamlit as st
 from datetime import datetime, date, time
-from backend import db_api #database api file
+from backend import db_api
 
 # ----------------- Session State Setup -----------------
 if "logged_in" not in st.session_state:
@@ -135,7 +135,7 @@ def patient_interface():
         
         if appts:
             for a in appts:
-                st.write(f"📅 {a['date']} ⏰ {a['time']} 🩺 {a['doctor']} - Status: {a['status']}")
+                st.write(f"📅 {a['date']} {a['time']} {a['doctor']} - Status: {a['status']}")
         else:
             st.info("No upcoming appointments.")
     elif st.session_state.page == "book_appointment":
