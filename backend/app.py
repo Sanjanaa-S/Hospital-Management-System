@@ -7,7 +7,7 @@ app = FastAPI()
 class UserLogin(BaseModel):
     username: str
     password: str
-    role: str  # Can be "Patient", "Doctor", or "Admin"
+    role: str 
 
 @app.post("/login/")
 def login(user: UserLogin):
