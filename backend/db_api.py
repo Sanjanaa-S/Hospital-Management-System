@@ -120,11 +120,6 @@ def patient_signup(username, password, name, contact, age, gender):
         if cursor.fetchone():
             return False, "Username already exists"
         
-        # Generate a unique P_ID for the patient
-        # p_id = random.randint(1000, 9999)
-        # cursor.execute("SELECT P_ID FROM patient WHERE P_ID = %s", (p_id,))
-        # while cursor.fetchone():
-        #     p_id = random.randint(1000, 9999)
         
         # Calculate DOB from age
         current_year = datetime.now().year
